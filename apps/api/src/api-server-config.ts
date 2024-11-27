@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import apiDatabaseConfig from './config/api-database.config';
 
 const environment = process.env.NODE_ENV || 'test';
 
@@ -8,7 +9,8 @@ const environment = process.env.NODE_ENV || 'test';
     ConfigModule.forRoot({
       envFilePath: `./config/.api.${environment}.env`,
       isGlobal: true,
-      load: [],
+      cache: true,
+      load: [apiDatabaseConfig],
     }),
   ],
 })
