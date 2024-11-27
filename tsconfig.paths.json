@@ -6,12 +6,6 @@
       "@libs/common/*": ["libs/common/src/*"],
       "@libs/dao": ["libs/dao/src"],
       "@libs/dao/*": ["libs/dao/src/*"]
-    },
-    "references": [
-      { "path": "apps/api" },
-      { "path": "apps/auth" },
-      { "path": "libs/common" },
-      { "path": "libs/dao" }
-    ]
+    }
   }
 }
