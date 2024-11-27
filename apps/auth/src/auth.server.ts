@@ -7,7 +7,7 @@ export class AuthServer {
   /**
    * initialize server
    */
-  async init() {
+  init() {
     this.app.setGlobalPrefix('auth');
     this._initializeSwagger();
   }
@@ -15,8 +15,8 @@ export class AuthServer {
   /**
    * execute server
    */
-  async run() {
-    await this.app.listen(process.env.SERVER_PORT);
+  run() {
+    this.app.listen(process.env.SERVER_PORT);
   }
 
   /**
@@ -25,8 +25,8 @@ export class AuthServer {
    */
   private _initializeSwagger(): void {
     const config = new DocumentBuilder()
-      .setTitle('Auth Server')
-      .setDescription('The Auth API description')
+      .setTitle('API Server')
+      .setDescription('The Todo Auth API description')
       .setVersion('1.0')
       .build();
 
